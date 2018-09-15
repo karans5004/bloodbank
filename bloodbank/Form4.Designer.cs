@@ -45,7 +45,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.dQuantity = new System.Windows.Forms.TextBox();
             this.DONATE = new System.Windows.Forms.Button();
             this.dHb = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
@@ -208,12 +208,12 @@
             this.label9.TabIndex = 2;
             this.label9.Text = "QUANTITY TO DONATE";
             // 
-            // textBox5
+            // dQuantity
             // 
-            this.textBox5.Location = new System.Drawing.Point(884, 283);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 22);
-            this.textBox5.TabIndex = 3;
+            this.dQuantity.Location = new System.Drawing.Point(884, 283);
+            this.dQuantity.Name = "dQuantity";
+            this.dQuantity.Size = new System.Drawing.Size(100, 22);
+            this.dQuantity.TabIndex = 3;
             // 
             // DONATE
             // 
@@ -224,6 +224,7 @@
             this.DONATE.TabIndex = 4;
             this.DONATE.Text = "DONATE";
             this.DONATE.UseVisualStyleBackColor = true;
+            this.DONATE.Click += new System.EventHandler(this.DONATE_Click);
             // 
             // dHb
             // 
@@ -236,7 +237,7 @@
             // 
             this.button2.Location = new System.Drawing.Point(236, 518);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.Size = new System.Drawing.Size(87, 29);
             this.button2.TabIndex = 12;
             this.button2.Text = "UPDATE";
             this.button2.UseVisualStyleBackColor = true;
@@ -250,7 +251,7 @@
             this.ClientSize = new System.Drawing.Size(1156, 600);
             this.Controls.Add(this.DONATE);
             this.Controls.Add(this.dHb);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.dQuantity);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
@@ -296,7 +297,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox dQuantity;
         private System.Windows.Forms.Button DONATE;
         private System.Windows.Forms.TextBox dHb;
         private System.Windows.Forms.Button button2;

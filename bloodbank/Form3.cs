@@ -30,7 +30,7 @@ namespace bloodbank
 
         private void button2_Click(object sender, EventArgs e)
         {
-            string insertQuery = "INSERT INTO bb.reciever(name,Bgroup,city,phone_no,password) VALUES('" + rName.Text + "','" + rBType.Text + "','" + rCity.Text + "','" + rPhno.Text + "','" + rPassword.Text + "')";
+            string insertQuery = "INSERT INTO bb.reciever(name,Bgroup,hb,city,phone_no,password) VALUES('" + rName.Text + "','" + rBType.Text + "','" + rHb.Text + "','" + rCity.Text + "','" + rPhno.Text + "','" + rPassword.Text + "')";
             connection.Open();
             MySqlCommand command = new MySqlCommand(insertQuery, connection);
             try

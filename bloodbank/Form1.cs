@@ -80,6 +80,9 @@ namespace bloodbank
         {           
                 Form4 DoDetails=new Form4();
                 DoDetails.Show();
+
+                Form5 ReDetails = new Form5();
+                ReDetails.Show();
                 
         }
             

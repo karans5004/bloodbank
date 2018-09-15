@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace bloodbank
 {
@@ -15,7 +16,7 @@ namespace bloodbank
         {
             InitializeComponent();
         }
-
+        MySqlConnection connection = new MySqlConnection("server=localhost;user id=root;password=karan@5004;database=bb");
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
@@ -113,7 +114,96 @@ namespace bloodbank
 
         private void Form5_Load(object sender, EventArgs e)
         {
+            try
+            {
 
+                connection.Open();
+                MySqlCommand cmd = new MySqlCommand("select id from reciever", connection);
+                MySqlDataReader dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    rId.Items.Add(dr[0].ToString());
+
+                }
+                dr.Close();
+                connection.Close();
+
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+
+            }
+        }
+
+        private void rId_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            connection.Open();
+            MySqlCommand cmd = new MySqlCommand("select * from reciever where id=" + this.rId.Text, connection);
+            MySqlDataReader dr = cmd.ExecuteReader();
+            dr.Read();
+            this.rName.Text = dr[1].ToString();
+            this.rBgroup.Text = dr[2].ToString();
+            this.rHb.Text = dr[3].ToString();
+            this.rAddress.Text = dr[4].ToString();
+            this.rPhno.Text = dr[5].ToString();
+            this.rPassword.Text = dr[6].ToString();
+            dr.Close();
+            connection.Close();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            connection.Open();
+            string str = "insert into requesters values(" + this.rId.Text + ",'" + this.rBgroup.Text + "','" + this.rQuantity.Text + "')";
+            //MessageBox.Show(str);
+            MySqlCommand cmd = new MySqlCommand(str, connection);
+            cmd.ExecuteNonQuery();
+
+            if (rBgroup.Text == "O-")
+            {
+                MessageBox.Show("Amount to pay = " + 1200 * Int32.Parse(rQuantity.Text));
+            }
+
+            if (rBgroup.Text == "O+")
+            {
+                MessageBox.Show("Amount to pay = " + 1000 * Int32.Parse(rQuantity.Text));
+            }
+
+            if (rBgroup.Text == "A-")
+            {
+                MessageBox.Show("Amount to pay = " + 700 * Int32.Parse(rQuantity.Text));
+            }
+
+            if (rBgroup.Text == "A+")
+            {
+                MessageBox.Show("Amount to pay = " + 600 * Int32.Parse(rQuantity.Text));
+            }
+
+            if (rBgroup.Text == "B-")
+            {
+                MessageBox.Show("Amount to pay = " + 600 * Int32.Parse(rQuantity.Text));
+            }
+
+            
+            if(rBgroup.Text == "B+")
+            {
+            MessageBox.Show("Amount to pay = "+ 500* Int32.Parse(rQuantity.Text));
+            }
+
+            if (rBgroup.Text == "AB-")
+            {
+                MessageBox.Show("Amount to pay = " + 800 * Int32.Parse(rQuantity.Text));
+            }
+
+            if (rBgroup.Text == "AB+")
+            {
+                MessageBox.Show("Amount to pay = " + 700 * Int32.Parse(rQuantity.Text));
+            }
+
+
+
+            connection.Close();
         }
     }
 }

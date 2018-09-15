@@ -90,5 +90,16 @@ namespace bloodbank
             MessageBox.Show("updated");
             connection.Close();
         }
+
+        private void DONATE_Click(object sender, EventArgs e)
+        {
+            connection.Open();
+            string str = "insert into donation values(" + this.dId.Text + ",'" + this.dBGroup.Text + "','" + this.dQuantity.Text + "')";
+            MessageBox.Show(str);
+            MySqlCommand cmd = new MySqlCommand(str, connection);
+            cmd.ExecuteNonQuery();
+            MessageBox.Show("inserted");
+            connection.Close();
+        }
     }
 }

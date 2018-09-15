@@ -41,6 +41,8 @@
             this.button2 = new System.Windows.Forms.Button();
             this.rPassword = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.rHb = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -64,7 +66,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(47, 223);
+            this.label5.Location = new System.Drawing.Point(47, 199);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(97, 17);
             this.label5.TabIndex = 4;
@@ -124,7 +126,7 @@
             "B-",
             "AB+",
             "AB-"});
-            this.rBType.Location = new System.Drawing.Point(166, 220);
+            this.rBType.Location = new System.Drawing.Point(166, 196);
             this.rBType.Name = "rBType";
             this.rBType.Size = new System.Drawing.Size(121, 24);
             this.rBType.TabIndex = 11;
@@ -164,6 +166,22 @@
             this.button1.Text = "HOME";
             this.button1.UseVisualStyleBackColor = true;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(47, 246);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(27, 17);
+            this.label3.TabIndex = 22;
+            this.label3.Text = "HB";
+            // 
+            // rHb
+            // 
+            this.rHb.Location = new System.Drawing.Point(166, 241);
+            this.rHb.Name = "rHb";
+            this.rHb.Size = new System.Drawing.Size(100, 22);
+            this.rHb.TabIndex = 23;
+            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -171,6 +189,8 @@
             this.BackColor = System.Drawing.Color.Khaki;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(1174, 560);
+            this.Controls.Add(this.rHb);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.rPassword);
             this.Controls.Add(this.button2);
@@ -207,5 +227,7 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox rPassword;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox rHb;
     }
 }
