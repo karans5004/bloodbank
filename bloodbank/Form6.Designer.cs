@@ -85,6 +85,7 @@
             this.label55 = new System.Windows.Forms.Label();
             this.label56 = new System.Windows.Forms.Label();
             this.label57 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -603,12 +604,23 @@
             this.label57.TabIndex = 56;
             this.label57.Text = "NOTE: 1 unit =100ml";
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(33, 29);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 57;
+            this.button1.Text = "HOME";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // Form6
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Khaki;
             this.ClientSize = new System.Drawing.Size(1260, 628);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label57);
             this.Controls.Add(this.label29);
             this.Controls.Add(this.label30);
@@ -732,6 +744,7 @@
         private System.Windows.Forms.Label label55;
         private System.Windows.Forms.Label label56;
         private System.Windows.Forms.Label label57;
+        private System.Windows.Forms.Button button1;
 
     }
 }

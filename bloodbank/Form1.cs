@@ -6,11 +6,13 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace bloodbank
 {
     public partial class Form1 : Form
     {
+        MySqlConnection connection = new MySqlConnection("datasource=localhost;port=3306;username=root;password=karan@5004");
         public Form1()
         {
             InitializeComponent();
@@ -59,6 +61,14 @@ namespace bloodbank
             {
                 panel1.Visible = true;
             }
+          /*  else if (comboBox1.SelectedIndex == 1)
+            {
+                panel2.Visible = true;
+            }
+            else if (comboBox1.SelectedIndex == 1)
+            {
+                panel3.Visible = true;
+            }*/
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -67,21 +77,33 @@ namespace bloodbank
         }
 
         private void button6_Click(object sender, EventArgs e)
-        {
-            Form4 DoDetails=new Form4();
-            DoDetails.Show();
+        {           
+                Form4 DoDetails=new Form4();
+                DoDetails.Show();
+                
         }
-
+            
         private void Form1_Load(object sender, EventArgs e)
         {
-            panel1.Visible = false;
-            panel2.Visible = false;
-            panel3.Visible = false;
+            panel1.Visible = true;
+            //panel2.Visible = false;
+            //panel3.Visible = false;
         }
 
         private void label10_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Form6 bInventory = new Form6();
+            bInventory.Show();
+        }
+
+        private void Form1_Load_1(object sender, EventArgs e)
+        {
+            
         }
 
 

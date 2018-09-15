@@ -40,6 +40,7 @@
             this.rPhno = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.rPassword = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -153,6 +154,16 @@
             this.rPassword.Size = new System.Drawing.Size(172, 22);
             this.rPassword.TabIndex = 20;
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(41, 25);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 21;
+            this.button1.Text = "HOME";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -160,6 +171,7 @@
             this.BackColor = System.Drawing.Color.Khaki;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(1174, 560);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.rPassword);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.rPhno);
@@ -194,5 +206,6 @@
         private System.Windows.Forms.TextBox rPhno;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox rPassword;
+        private System.Windows.Forms.Button button1;
     }
 }
