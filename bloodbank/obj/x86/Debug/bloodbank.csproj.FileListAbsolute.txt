@@ -1,0 +1,14 @@
+F:\project\dbms\bloodbank\bloodbank\bin\Debug\bloodbank.exe
+F:\project\dbms\bloodbank\bloodbank\bin\Debug\bloodbank.pdb
+F:\project\dbms\bloodbank\bloodbank\obj\x86\Debug\bloodbank.Form1.resources
+F:\project\dbms\bloodbank\bloodbank\obj\x86\Debug\bloodbank.Properties.Resources.resources
+F:\project\dbms\bloodbank\bloodbank\obj\x86\Debug\bloodbank.csproj.GenerateResource.Cache
+F:\project\dbms\bloodbank\bloodbank\obj\x86\Debug\bloodbank.exe
+F:\project\dbms\bloodbank\bloodbank\obj\x86\Debug\bloodbank.pdb
+F:\project\dbms\bloodbank\bloodbank\obj\x86\Debug\bloodbank.Form2.resources
+F:\project\dbms\bloodbank\bloodbank\obj\x86\Debug\bloodbank.csprojResolveAssemblyReference.cache
+F:\project\dbms\bloodbank\bloodbank\obj\x86\Debug\bloodbank.Form3.resources
+F:\project\dbms\bloodbank\bloodbank\bin\Debug\bloodbank.exe.config
+F:\project\dbms\bloodbank\bloodbank\obj\x86\Debug\bloodbank.Form4.resources
+F:\project\dbms\bloodbank\bloodbank\obj\x86\Debug\bloodbank.Form5.resources
+F:\project\dbms\bloodbank\bloodbank\obj\x86\Debug\bloodbank.Form6.resources

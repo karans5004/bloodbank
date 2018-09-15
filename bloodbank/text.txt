@@ -1,0 +1,20 @@
+Blood is recognized as the most precious element that sustains life.
+It saves innumerable lives across the worls in a variety of conditions.
+The need for blood is great-on any given day.approximately 39000 units of Red Blood Cells are needed.
+More than 29 million units of blood components are transfused every year.
+Despite the increase in the number of donors.Blood remains in short supply during emergencies.
+
+
+
+“A single pint can save three lives, a single gesture can create a million smiles”
+
+
+
+SqlConnection con = new sqlConnection("server name=Localhost;data source=test;uid=root;pwd=karan@5004");
+con.open();
+
+	sqlCommand cmd=new sqlCommand("Select roll from stud");
+	
+	DataReader dr;
+	dr=cmd.ExecuteReader();
+	
