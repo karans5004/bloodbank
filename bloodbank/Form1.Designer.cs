@@ -44,9 +44,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.dId = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.dPassword = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -208,13 +208,14 @@
             this.label9.TabIndex = 24;
             this.label9.Text = "SELECT ID";
             // 
-            // comboBox3
+            // dId
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(104, 24);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(121, 24);
-            this.comboBox3.TabIndex = 23;
+            this.dId.FormattingEnabled = true;
+            this.dId.Location = new System.Drawing.Point(104, 24);
+            this.dId.Name = "dId";
+            this.dId.Size = new System.Drawing.Size(121, 24);
+            this.dId.TabIndex = 23;
+            this.dId.SelectedIndexChanged += new System.EventHandler(this.dId_SelectedIndexChanged);
             // 
             // label10
             // 
@@ -225,19 +226,19 @@
             this.label10.TabIndex = 22;
             this.label10.Text = "PASSWORD";
             // 
-            // textBox1
+            // dPassword
             // 
-            this.textBox1.Location = new System.Drawing.Point(100, 64);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(147, 22);
-            this.textBox1.TabIndex = 21;
+            this.dPassword.Location = new System.Drawing.Point(100, 64);
+            this.dPassword.Name = "dPassword";
+            this.dPassword.Size = new System.Drawing.Size(147, 22);
+            this.dPassword.TabIndex = 21;
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.comboBox3);
+            this.panel1.Controls.Add(this.dId);
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.label9);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.dPassword);
             this.panel1.Location = new System.Drawing.Point(876, 238);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(254, 111);
@@ -293,9 +294,9 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox dId;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox dPassword;
         private System.Windows.Forms.Panel panel1;
     }
 }

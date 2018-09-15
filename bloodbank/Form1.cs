@@ -12,7 +12,7 @@ namespace bloodbank
 {
     public partial class Form1 : Form
     {
-        MySqlConnection connection = new MySqlConnection("datasource=localhost;port=3306;username=root;password=karan@5004");
+        MySqlConnection connection = new MySqlConnection("server=localhost;user id=root;password=karan@5004;database=bb");
         public Form1()
         {
             InitializeComponent();
@@ -57,10 +57,57 @@ namespace bloodbank
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (comboBox1.SelectedIndex == 0)
-            {
+            
                 panel1.Visible = true;
-            }
+                if (comboBox1.Text == "DONOR")
+                {
+                    try
+                    {
+
+                        connection.Open();
+                        MySqlCommand cmd = new MySqlCommand("select id from donor", connection);
+                        MySqlDataReader dr = cmd.ExecuteReader();
+                        while (dr.Read())
+                        {
+                            dId.Items.Add(dr[0].ToString());
+
+                        }
+                        dr.Close();
+                        connection.Close();
+
+                    }
+                    catch (MySqlException ex)
+                    {
+                        MessageBox.Show(ex.Message);
+
+                    }
+
+                }
+
+                if (comboBox1.Text == "RECIEVER")
+                {
+                    try
+                    {
+
+                        connection.Open();
+                        MySqlCommand cmd = new MySqlCommand("select id from reciever", connection);
+                        MySqlDataReader dr = cmd.ExecuteReader();
+                        while (dr.Read())
+                        {
+                            dId.Items.Add(dr[0].ToString());
+
+                        }
+                        dr.Close();
+                        connection.Close();
+
+                    }
+                    catch (MySqlException ex)
+                    {
+                        MessageBox.Show(ex.Message);
+
+                    }
+
+                }
           /*  else if (comboBox1.SelectedIndex == 1)
             {
                 panel2.Visible = true;
@@ -69,21 +116,56 @@ namespace bloodbank
             {
                 panel3.Visible = true;
             }*/
-        }
-
+        
+    }
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
 
         private void button6_Click(object sender, EventArgs e)
-        {           
-                Form4 DoDetails=new Form4();
-                DoDetails.Show();
+        {
+             if(comboBox1.Text == "DONOR")
+            {
+                MySqlCommand cmd = new MySqlCommand("select password from donor where id=" + this.dId.Text, connection);
+                connection.Open();
+                MySqlDataReader dr = cmd.ExecuteReader();
+                dr.Read();
+                string abc = dr[0].ToString();
+                if (dPassword.Text == abc)
+                {
+                    Form4 DoDetails = new Form4();
+                    DoDetails.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Invalid Password");
+                }
+                connection.Close();
+            }
+             else if (comboBox1.Text == "RECIEVER")
+             {
+                 MySqlCommand cmd = new MySqlCommand("select password from reciever where id=" + this.dId.Text, connection);
+                 connection.Open();
+                 MySqlDataReader dr = cmd.ExecuteReader();
+                 dr.Read();
+                 string abc = dr[0].ToString();
+                 if (dPassword.Text == abc)
+                 {
+                     Form5 ReDetails = new Form5();
+                     ReDetails.Show();
 
-                Form5 ReDetails = new Form5();
-                ReDetails.Show();
-                
+                 }
+                 else
+                 {
+                     MessageBox.Show("Invalid Password");
+                 }
+                 connection.Close();
+             }
+            
+            
+        
+               
         }
             
         private void Form1_Load(object sender, EventArgs e)
@@ -107,6 +189,11 @@ namespace bloodbank
         private void Form1_Load_1(object sender, EventArgs e)
         {
             
+        }
+
+        private void dId_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
 
 
