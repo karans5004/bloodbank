@@ -20,5 +20,19 @@ namespace bloodbank
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form1 home = new Form1();
+            home.Show();
+            
+        }
+
+        private void Form6_Load(object sender, EventArgs e)
+        {
+            this.Location = new Point(0, 0);
+
+            this.Size = Screen.PrimaryScreen.WorkingArea.Size;
+        }
     }
 }

@@ -13,6 +13,7 @@ namespace bloodbank
     public partial class Form1 : Form
     {
         MySqlConnection connection = new MySqlConnection("server=localhost;user id=root;password=karan@5004;database=bb");
+
         public Form1()
         {
             InitializeComponent();
@@ -46,6 +47,8 @@ namespace bloodbank
 
         private void button3_Click(object sender, EventArgs e)
         {
+            
+           //DoRegForm.Size = new System.Drawing.Size(100%);
             Form2 DoRegForm = new Form2();
             DoRegForm.Show();
         }
@@ -188,6 +191,13 @@ namespace bloodbank
 
         private void Form1_Load_1(object sender, EventArgs e)
         {
+
+            this.Location = new Point(0, 0);
+
+            this.Size = Screen.PrimaryScreen.WorkingArea.Size;
+            
+
+
             
         }
 
@@ -195,6 +205,12 @@ namespace bloodbank
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
 
 
         

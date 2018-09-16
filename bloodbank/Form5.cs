@@ -114,6 +114,9 @@ namespace bloodbank
 
         private void Form5_Load(object sender, EventArgs e)
         {
+            this.Location = new Point(0, 0);
+
+            this.Size = Screen.PrimaryScreen.WorkingArea.Size; 
             try
             {
 
@@ -204,6 +207,12 @@ namespace bloodbank
 
 
             connection.Close();
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            Form1 home = new Form1();
+            home.Show();
         }
     }
 }

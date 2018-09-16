@@ -20,8 +20,9 @@ namespace bloodbank
 
         private void Form2_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'bbDataSet.donor' table. You can move, or remove it, as needed.
-         //this.donorTableAdapter.Fill(this.bbDataSet.donor);
+            this.Location = new Point(0, 0);
+
+            this.Size = Screen.PrimaryScreen.WorkingArea.Size;
 
         }
 

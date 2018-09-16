@@ -25,6 +25,9 @@ namespace bloodbank
 
         private void Form4_Load(object sender, EventArgs e)
         {
+            this.Location = new Point(0, 0);
+
+            this.Size = Screen.PrimaryScreen.WorkingArea.Size; 
             try
             {
                 
@@ -51,7 +54,8 @@ namespace bloodbank
 
         private void button4_Click(object sender, EventArgs e)
         {
-
+            Form1 home = new Form1();
+            home.Show();
         }
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)

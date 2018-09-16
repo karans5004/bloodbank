@@ -63,6 +63,16 @@ namespace bloodbank.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap blood_drop_vector {
+            get {
+                object obj = ResourceManager.GetObject("blood-drop-vector", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Buddy_the_Blood_Drop_Hoxworth_Mascot_212x300 {
             get {
                 object obj = ResourceManager.GetObject("Buddy-the-Blood-Drop-Hoxworth-Mascot-212x300", resourceCulture);

@@ -50,5 +50,18 @@ namespace bloodbank
             }
             connection.Close();
         }
+
+        private void Form3_Load(object sender, EventArgs e)
+        {
+            this.Location = new Point(0, 0);
+
+            this.Size = Screen.PrimaryScreen.WorkingArea.Size;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form1 home = new Form1();
+            home.Show();
+        }
     }
 }
