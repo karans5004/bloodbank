@@ -83,6 +83,16 @@ namespace bloodbank.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap khaki {
+            get {
+                object obj = ResourceManager.GetObject("khaki", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Mega_Blood_Donation_Camp_2017_Sampradaana {
             get {
                 object obj = ResourceManager.GetObject("Mega-Blood-Donation-Camp-2017-Sampradaana", resourceCulture);

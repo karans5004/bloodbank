@@ -36,7 +36,7 @@ namespace bloodbank
             bInventory.Size = new System.Drawing.Size(500, 500);
 
             
-            Application.Run(new Form1());
+            Application.Run(new Form8());
         }
     }
 }

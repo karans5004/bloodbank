@@ -26,13 +26,16 @@ namespace bloodbank
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            Form7 childForm = new Form7();
+           childForm.MdiParent = this;
+            childForm.Text = "New Client";
+            childForm.Show();
+           
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            Form3 ReqRegForm = new Form3();
-            ReqRegForm.Show();
+            
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -192,9 +195,7 @@ namespace bloodbank
         private void Form1_Load_1(object sender, EventArgs e)
         {
 
-            this.Location = new Point(0, 0);
-
-            this.Size = Screen.PrimaryScreen.WorkingArea.Size;
+            this.WindowState = FormWindowState.Maximized;
             
 
 
@@ -210,6 +211,8 @@ namespace bloodbank
         {
 
         }
+
+        
 
 
 

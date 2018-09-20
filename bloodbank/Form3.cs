@@ -53,9 +53,7 @@ namespace bloodbank
 
         private void Form3_Load(object sender, EventArgs e)
         {
-            this.Location = new Point(0, 0);
-
-            this.Size = Screen.PrimaryScreen.WorkingArea.Size;
+            this.WindowState = FormWindowState.Maximized;
         }
 
         private void button1_Click(object sender, EventArgs e)

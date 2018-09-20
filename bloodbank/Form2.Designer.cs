@@ -47,7 +47,6 @@
             this.dHB = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.dPassword = new System.Windows.Forms.TextBox();
-            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.bbDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.donorBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -104,6 +103,7 @@
             this.dName.Name = "dName";
             this.dName.Size = new System.Drawing.Size(233, 22);
             this.dName.TabIndex = 10;
+            this.dName.TextChanged += new System.EventHandler(this.dName_TextChanged);
             // 
             // dBType
             // 
@@ -201,26 +201,15 @@
             this.dPassword.Size = new System.Drawing.Size(100, 22);
             this.dPassword.TabIndex = 29;
             // 
-            // button3
-            // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(86, 42);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 30;
-            this.button3.Text = "HOME";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.Khaki;
             this.BackgroundImage = global::bloodbank.Properties.Resources.Buddy_the_Blood_Drop_Hoxworth_Mascot_212x300;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(1866, 839);
-            this.Controls.Add(this.button3);
             this.Controls.Add(this.dPassword);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dHB);
@@ -268,6 +257,5 @@
         private System.Windows.Forms.TextBox dHB;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox dPassword;
-        private System.Windows.Forms.Button button3;
     }
 }

@@ -38,7 +38,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.dPhno = new System.Windows.Forms.TextBox();
             this.dId = new System.Windows.Forms.ComboBox();
-            this.button4 = new System.Windows.Forms.Button();
             this.dBGroup = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.dPassword = new System.Windows.Forms.TextBox();
@@ -135,17 +134,6 @@
             this.dId.Size = new System.Drawing.Size(121, 24);
             this.dId.TabIndex = 15;
             this.dId.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
-            // 
-            // button4
-            // 
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(196, 50);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 16;
-            this.button4.Text = "HOME";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // dBGroup
             // 
@@ -257,7 +245,6 @@
             this.Controls.Add(this.label8);
             this.Controls.Add(this.dPassword);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.button4);
             this.Controls.Add(this.dId);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.dPhno);
@@ -290,7 +277,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox dPhno;
         private System.Windows.Forms.ComboBox dId;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.ComboBox dBGroup;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox dPassword;

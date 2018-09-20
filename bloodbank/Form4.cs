@@ -25,9 +25,7 @@ namespace bloodbank
 
         private void Form4_Load(object sender, EventArgs e)
         {
-            this.Location = new Point(0, 0);
-
-            this.Size = Screen.PrimaryScreen.WorkingArea.Size; 
+            this.WindowState = FormWindowState.Maximized;
             try
             {
                 

@@ -114,9 +114,9 @@ namespace bloodbank
 
         private void Form5_Load(object sender, EventArgs e)
         {
-            this.Location = new Point(0, 0);
-
-            this.Size = Screen.PrimaryScreen.WorkingArea.Size; 
+            // TODO: This line of code loads data into the 'bbDataSet3.requesters' table. You can move, or remove it, as needed.
+            this.requestersTableAdapter.Fill(this.bbDataSet3.requesters);
+            this.WindowState = FormWindowState.Maximized;
             try
             {
 

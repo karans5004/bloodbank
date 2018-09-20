@@ -20,9 +20,7 @@ namespace bloodbank
 
         private void Form2_Load(object sender, EventArgs e)
         {
-            this.Location = new Point(0, 0);
-
-            this.Size = Screen.PrimaryScreen.WorkingArea.Size;
+            this.WindowState = FormWindowState.Maximized;
 
         }
 
@@ -58,6 +56,11 @@ namespace bloodbank
             home.Show();
            
             
+
+        }
+
+        private void dName_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }
