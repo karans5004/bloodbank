@@ -54,7 +54,14 @@ namespace bloodbank
 
         private void button2_Click(object sender, EventArgs e)
         {
+            connection.Open();
+            string str = "update reciever set name='" + this.rName.Text + "',address='" + this.rAddress.Text + "',bGroup='" + this.rBgroup.Text + "',hb='" + this.rHb.Text + "',phone_no='" + this.rPhno.Text + "',password='" + this.rPassword.Text + "' where id=" + this.rId.Text;
+            MessageBox.Show(str);
 
+            MySqlCommand cmd = new MySqlCommand(str, connection);
+            cmd.ExecuteNonQuery();
+            MessageBox.Show("updated");
+            connection.Close();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -114,6 +121,8 @@ namespace bloodbank
 
         private void Form5_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'bbDataSet1.requesters' table. You can move, or remove it, as needed.
+            this.requestersTableAdapter1.Fill(this.bbDataSet1.requesters);
             // TODO: This line of code loads data into the 'bbDataSet3.requesters' table. You can move, or remove it, as needed.
             this.requestersTableAdapter.Fill(this.bbDataSet3.requesters);
             this.WindowState = FormWindowState.Maximized;
@@ -149,8 +158,9 @@ namespace bloodbank
             this.rBgroup.Text = dr[2].ToString();
             this.rHb.Text = dr[3].ToString();
             this.rAddress.Text = dr[4].ToString();
-            this.rPhno.Text = dr[5].ToString();
-            this.rPassword.Text = dr[6].ToString();
+            this.rAmtRec.Text = dr[5].ToString();
+            this.rPhno.Text = dr[6].ToString();
+            this.rPassword.Text = dr[7].ToString();
             dr.Close();
             connection.Close();
         }
@@ -159,60 +169,189 @@ namespace bloodbank
         {
             connection.Open();
             string str = "insert into requesters values(" + this.rId.Text + ",'" + this.rBgroup.Text + "','" + this.rQuantity.Text + "')";
+
+            string str1 = "select cost_per_unit from requests_recieved where Bgroup = '" + this.rBgroup.Text + "';";
+            MessageBox.Show(str1);
             //MessageBox.Show(str);
             MySqlCommand cmd = new MySqlCommand(str, connection);
+            MySqlCommand cmd1 = new MySqlCommand(str1, connection);
             cmd.ExecuteNonQuery();
+            //cmd1.ExecuteNonQuery();
+            MySqlDataReader dr = cmd1.ExecuteReader();
+            dr.Read();
+            string abc = dr[0].ToString();
+
 
             if (rBgroup.Text == "O-")
             {
-                MessageBox.Show("Amount to pay = " + 1200 * Int32.Parse(rQuantity.Text));
+                MessageBox.Show("Amount to pay = " + Int32.Parse(abc) * Int32.Parse(rQuantity.Text));
+
+                MySqlConnection connection1 = new MySqlConnection("server=localhost;user id=root;password=karan@5004;database=bb");
+                connection1.Open();
+                int ab = Int32.Parse(abc);
+                int abb = Int32.Parse(rQuantity.Text);
+                int amt_rec = ab * abb;
+                string amt_reci = amt_rec.ToString();
+                //string str = "insert into donation values(" + this.dId.Text + ",'" + this.dBGroup.Text + "','" + this.dQuantity.Text + "')";
+                string s1 = "update reciever set total_amount_paid = total_amount_paid +" + amt_reci + " where id = '" + rId.Text + "';";
+                MessageBox.Show(s1);
+                MySqlCommand cmd2 = new MySqlCommand(s1, connection1);
+                cmd2.ExecuteNonQuery();
+                connection1.Close();
+
+
             }
 
             if (rBgroup.Text == "O+")
             {
-                MessageBox.Show("Amount to pay = " + 1000 * Int32.Parse(rQuantity.Text));
+                MessageBox.Show("Amount to pay = " + Int32.Parse(abc) * Int32.Parse(rQuantity.Text));
+
+                MySqlConnection connection1 = new MySqlConnection("server=localhost;user id=root;password=karan@5004;database=bb");
+                connection1.Open();
+                int ab = Int32.Parse(abc);
+                int abb = Int32.Parse(rQuantity.Text);
+                int amt_rec = ab * abb;
+                string amt_reci = amt_rec.ToString();
+                //string str = "insert into donation values(" + this.dId.Text + ",'" + this.dBGroup.Text + "','" + this.dQuantity.Text + "')";
+                string s1 = "update reciever set total_amount_paid = total_amount_paid +" + amt_reci + " where id = '" + rId.Text + "';";
+                MessageBox.Show(s1);
+                MySqlCommand cmd2 = new MySqlCommand(s1, connection1);
+                cmd2.ExecuteNonQuery();
+                connection1.Close();
             }
 
             if (rBgroup.Text == "A-")
             {
-                MessageBox.Show("Amount to pay = " + 700 * Int32.Parse(rQuantity.Text));
+                MessageBox.Show("Amount to pay = " + Int32.Parse(abc) * Int32.Parse(rQuantity.Text));
+
+                MySqlConnection connection1 = new MySqlConnection("server=localhost;user id=root;password=karan@5004;database=bb");
+                connection1.Open();
+                int ab = Int32.Parse(abc);
+                int abb = Int32.Parse(rQuantity.Text);
+                int amt_rec = ab * abb;
+                string amt_reci = amt_rec.ToString();
+                //string str = "insert into donation values(" + this.dId.Text + ",'" + this.dBGroup.Text + "','" + this.dQuantity.Text + "')";
+                string s1 = "update reciever set total_amount_paid = total_amount_paid +" + amt_reci + " where id = '" + rId.Text + "';";
+                MessageBox.Show(s1);
+                MySqlCommand cmd2 = new MySqlCommand(s1, connection1);
+                cmd2.ExecuteNonQuery();
+                connection1.Close();
             }
 
             if (rBgroup.Text == "A+")
             {
-                MessageBox.Show("Amount to pay = " + 600 * Int32.Parse(rQuantity.Text));
+                MessageBox.Show("Amount to pay = " + Int32.Parse(abc) * Int32.Parse(rQuantity.Text));
+
+                MySqlConnection connection1 = new MySqlConnection("server=localhost;user id=root;password=karan@5004;database=bb");
+                connection1.Open();
+                int ab = Int32.Parse(abc);
+                int abb = Int32.Parse(rQuantity.Text);
+                int amt_rec = ab * abb;
+                string amt_reci = amt_rec.ToString();
+                string s1 = "update reciever set total_amount_paid = total_amount_paid +" + amt_reci + " where id = '" + rId.Text + "';";
+                MessageBox.Show(s1);
+                MySqlCommand cmd2 = new MySqlCommand(s1, connection1);
+                cmd2.ExecuteNonQuery();
+                connection1.Close();
             }
 
             if (rBgroup.Text == "B-")
             {
-                MessageBox.Show("Amount to pay = " + 600 * Int32.Parse(rQuantity.Text));
+                MessageBox.Show("Amount to pay = " + Int32.Parse(abc) * Int32.Parse(rQuantity.Text));
+
+                MySqlConnection connection1 = new MySqlConnection("server=localhost;user id=root;password=karan@5004;database=bb");
+                connection1.Open();
+                int ab = Int32.Parse(abc);
+                int abb = Int32.Parse(rQuantity.Text);
+                int amt_rec = ab * abb;
+                string amt_reci = amt_rec.ToString();
+                //string str = "insert into donation values(" + this.dId.Text + ",'" + this.dBGroup.Text + "','" + this.dQuantity.Text + "')";
+                string s1 = "update reciever set total_amount_paid = total_amount_paid +" + amt_reci + " where id = '" + rId.Text + "';";
+                MessageBox.Show(s1);
+                MySqlCommand cmd2 = new MySqlCommand(s1, connection1);
+                cmd2.ExecuteNonQuery();
+                connection1.Close();
             }
 
             
             if(rBgroup.Text == "B+")
             {
-            MessageBox.Show("Amount to pay = "+ 500* Int32.Parse(rQuantity.Text));
+                MessageBox.Show("Amount to pay = " + Int32.Parse(abc) * Int32.Parse(rQuantity.Text));
+
+                MySqlConnection connection1 = new MySqlConnection("server=localhost;user id=root;password=karan@5004;database=bb");
+                connection1.Open();
+                int ab = Int32.Parse(abc);
+                int abb = Int32.Parse(rQuantity.Text);
+                int amt_rec = ab * abb;
+                string amt_reci = amt_rec.ToString();
+                //string str = "insert into donation values(" + this.dId.Text + ",'" + this.dBGroup.Text + "','" + this.dQuantity.Text + "')";
+                string s1 = "update reciever set total_amount_paid = total_amount_paid +" + amt_reci + " where id = '" + rId.Text + "';";
+                MessageBox.Show(s1);
+                MySqlCommand cmd2 = new MySqlCommand(s1, connection1);
+                cmd2.ExecuteNonQuery();
+                connection1.Close();
             }
 
             if (rBgroup.Text == "AB-")
             {
-                MessageBox.Show("Amount to pay = " + 800 * Int32.Parse(rQuantity.Text));
+                MessageBox.Show("Amount to pay = " + Int32.Parse(abc) * Int32.Parse(rQuantity.Text));
+
+                MySqlConnection connection1 = new MySqlConnection("server=localhost;user id=root;password=karan@5004;database=bb");
+                connection1.Open();
+                int ab = Int32.Parse(abc);
+                int abb = Int32.Parse(rQuantity.Text);
+                int amt_rec = ab * abb;
+                string amt_reci = amt_rec.ToString();
+                //string str = "insert into donation values(" + this.dId.Text + ",'" + this.dBGroup.Text + "','" + this.dQuantity.Text + "')";
+                string s1 = "update reciever set total_amount_paid = total_amount_paid +" + amt_reci + " where id = '" + rId.Text + "';";
+                MessageBox.Show(s1);
+                MySqlCommand cmd2 = new MySqlCommand(s1, connection1);
+                cmd2.ExecuteNonQuery();
+                connection1.Close();
             }
 
             if (rBgroup.Text == "AB+")
             {
-                MessageBox.Show("Amount to pay = " + 700 * Int32.Parse(rQuantity.Text));
+                MessageBox.Show("Amount to pay = " + Int32.Parse(abc) * Int32.Parse(rQuantity.Text));
+
+                MySqlConnection connection1 = new MySqlConnection("server=localhost;user id=root;password=karan@5004;database=bb");
+                connection1.Open();
+                int ab = Int32.Parse(abc);
+                int abb = Int32.Parse(rQuantity.Text);
+                int amt_rec = ab * abb;
+                string amt_reci = amt_rec.ToString();
+                //string str = "insert into donation values(" + this.dId.Text + ",'" + this.dBGroup.Text + "','" + this.dQuantity.Text + "')";
+                string s1 = "update reciever set total_amount_paid = total_amount_paid +" + amt_reci + " where id = '" + rId.Text + "';";
+                MessageBox.Show(s1);
+                MySqlCommand cmd2 = new MySqlCommand(s1, connection1);
+                cmd2.ExecuteNonQuery();
+                connection1.Close();
             }
 
 
-
+            dr.Close();
             connection.Close();
+
+
+            Form5 f5 = new Form5();
+            f5.Show();
+            this.Close();
         }
 
         private void button3_Click_1(object sender, EventArgs e)
         {
             Form1 home = new Form1();
             home.Show();
+        }
+
+        private void rPassword_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void textBox1_TextChanged_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

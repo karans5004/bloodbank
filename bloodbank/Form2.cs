@@ -20,6 +20,8 @@ namespace bloodbank
 
         private void Form2_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'bbDataSet3.donor' table. You can move, or remove it, as needed.
+            this.donorTableAdapter1.Fill(this.bbDataSet3.donor);
             this.WindowState = FormWindowState.Maximized;
 
         }
@@ -42,7 +44,7 @@ namespace bloodbank
             }
             catch (MySqlException ex)
             {
-                MessageBox.Show("my sql exception occured");
+                MessageBox.Show(""+ex);
             }
             connection.Close();
 
@@ -60,6 +62,11 @@ namespace bloodbank
         }
 
         private void dName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dPassword_TextChanged(object sender, EventArgs e)
         {
 
         }

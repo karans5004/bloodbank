@@ -46,13 +46,16 @@ namespace bloodbank
             }
             catch (MySqlException ex)
             {
-                MessageBox.Show("my sql exception occured");
+                MessageBox.Show(""+ex);
             }
             connection.Close();
         }
 
         private void Form3_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'bbDataSet4.reciever' table. You can move, or remove it, as needed.
+            this.recieverTableAdapter.Fill(this.bbDataSet4.reciever);
+            
             this.WindowState = FormWindowState.Maximized;
         }
 
@@ -60,6 +63,11 @@ namespace bloodbank
         {
             Form1 home = new Form1();
             home.Show();
+        }
+
+        private void rPassword_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -57,7 +57,6 @@
             // 
             // menuStrip1
             // 
-            this.menuStrip1.AutoSize = false;
             this.menuStrip1.BackColor = System.Drawing.Color.Khaki;
             this.menuStrip1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
@@ -67,10 +66,10 @@
             this.dONORREGISTRATIONToolStripMenuItem,
             this.rEQUESTBLOODToolStripMenuItem,
             this.bLOODINVENTORYToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(216, 57);
+            this.menuStrip1.Location = new System.Drawing.Point(190, 96);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.menuStrip1.Size = new System.Drawing.Size(833, 62);
+            this.menuStrip1.Size = new System.Drawing.Size(786, 28);
             this.menuStrip1.TabIndex = 27;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
@@ -98,8 +97,8 @@
             // rEQUESTBLOODToolStripMenuItem
             // 
             this.rEQUESTBLOODToolStripMenuItem.Name = "rEQUESTBLOODToolStripMenuItem";
-            this.rEQUESTBLOODToolStripMenuItem.Size = new System.Drawing.Size(135, 58);
-            this.rEQUESTBLOODToolStripMenuItem.Text = "REQUEST BLOOD";
+            this.rEQUESTBLOODToolStripMenuItem.Size = new System.Drawing.Size(203, 24);
+            this.rEQUESTBLOODToolStripMenuItem.Text = "REQUESTER REGISTRATION";
             this.rEQUESTBLOODToolStripMenuItem.Click += new System.EventHandler(this.rEQUESTBLOODToolStripMenuItem_Click);
             // 
             // bLOODINVENTORYToolStripMenuItem
@@ -125,6 +124,7 @@
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

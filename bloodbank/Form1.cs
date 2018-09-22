@@ -159,6 +159,7 @@ namespace bloodbank
                  if (dPassword.Text == abc)
                  {
                      Form5 ReDetails = new Form5();
+                     
                      ReDetails.Show();
 
                  }
@@ -189,6 +190,7 @@ namespace bloodbank
         private void button5_Click(object sender, EventArgs e)
         {
             Form6 bInventory = new Form6();
+
             bInventory.Show();
         }
 
@@ -212,6 +214,11 @@ namespace bloodbank
 
         }
 
+        private void dPassword_TextChanged(object sender, EventArgs e)
+        {
+
+            dPassword.PasswordChar = '*';
+        }
         
 
 

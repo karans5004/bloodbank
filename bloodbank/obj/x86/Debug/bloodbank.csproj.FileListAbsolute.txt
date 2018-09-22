@@ -14,3 +14,4 @@ F:\project\dbms\bloodbank\bloodbank\obj\x86\Debug\bloodbank.Form5.resources
 F:\project\dbms\bloodbank\bloodbank\obj\x86\Debug\bloodbank.Form6.resources
 F:\project\dbms\bloodbank\bloodbank\obj\x86\Debug\bloodbank.Form7.resources
 F:\project\dbms\bloodbank\bloodbank\obj\x86\Debug\bloodbank.Form8.resources
+F:\project\dbms\bloodbank\bloodbank\obj\x86\Debug\bloodbank.Form9.resources

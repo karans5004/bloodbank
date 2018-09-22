@@ -18,6 +18,8 @@ namespace bloodbank
 
         private void Form8_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'bbDataSet1.requests_recieved' table. You can move, or remove it, as needed.
+            this.requests_recievedTableAdapter.Fill(this.bbDataSet1.requests_recieved);
             // TODO: This line of code loads data into the 'bbDataSet5.available_stock' table. You can move, or remove it, as needed.
             this.available_stockTableAdapter.Fill(this.bbDataSet5.available_stock);
             // TODO: This line of code loads data into the 'bbDataSet2.donor' table. You can move, or remove it, as needed.
@@ -28,6 +30,16 @@ namespace bloodbank
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

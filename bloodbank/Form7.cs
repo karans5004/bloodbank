@@ -30,10 +30,11 @@ namespace bloodbank
         private void form1ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form1 home = new Form1();
+            home.MdiParent = this;
             home.Show();
         }
 
-        Form1 home;
+        
             
        /* private void form1ToolStripMenuItem1_Click(object sender, EventArgs e)
         {

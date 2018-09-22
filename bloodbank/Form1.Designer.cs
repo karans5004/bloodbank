@@ -50,11 +50,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(722, 20);
+            this.label1.Font = new System.Drawing.Font("Showcard Gothic", 19.8F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(741, 12);
             this.label1.Name = "label1";
             this.label1.Padding = new System.Windows.Forms.Padding(2);
-            this.label1.Size = new System.Drawing.Size(360, 28);
+            this.label1.Size = new System.Drawing.Size(606, 47);
             this.label1.TabIndex = 0;
             this.label1.Text = "BLOOD BANK MANAGEMENT SYSTEM";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -102,9 +102,10 @@
             // label8
             // 
             this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(186, 167);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(663, 85);
+            this.label8.Size = new System.Drawing.Size(875, 120);
             this.label8.TabIndex = 16;
             this.label8.Text = resources.GetString("label8.Text");
             this.label8.Click += new System.EventHandler(this.label8_Click);
@@ -163,6 +164,7 @@
             this.dPassword.Name = "dPassword";
             this.dPassword.Size = new System.Drawing.Size(147, 22);
             this.dPassword.TabIndex = 21;
+            this.dPassword.TextChanged += new System.EventHandler(this.dPassword_TextChanged);
             // 
             // panel1
             // 
