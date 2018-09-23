@@ -96,5 +96,12 @@ namespace bloodbank
             bInventory.MdiParent = this;
             bInventory.Show();
         }
+
+        private void aBOUTUSToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form9 f9 = new Form9();
+            f9.MdiParent = this;
+            f9.Show();
+        }
     }
 }

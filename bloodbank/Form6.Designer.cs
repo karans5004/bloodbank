@@ -378,7 +378,7 @@
             this.label53.Font = new System.Drawing.Font("Sitka Small", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label53.Location = new System.Drawing.Point(743, 201);
             this.label53.Name = "label53";
-            this.label53.Size = new System.Drawing.Size(251, 50);
+            this.label53.Size = new System.Drawing.Size(242, 49);
             this.label53.TabIndex = 87;
             this.label53.Text = "COST / UNIT";
             // 
@@ -388,7 +388,7 @@
             this.label54.Font = new System.Drawing.Font("Sitka Small", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label54.Location = new System.Drawing.Point(523, 201);
             this.label54.Name = "label54";
-            this.label54.Size = new System.Drawing.Size(214, 50);
+            this.label54.Size = new System.Drawing.Size(208, 49);
             this.label54.TabIndex = 86;
             this.label54.Text = "QUANTITY";
             // 
@@ -398,7 +398,7 @@
             this.label55.Font = new System.Drawing.Font("Sitka Small", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label55.Location = new System.Drawing.Point(252, 201);
             this.label55.Name = "label55";
-            this.label55.Size = new System.Drawing.Size(255, 50);
+            this.label55.Size = new System.Drawing.Size(246, 49);
             this.label55.TabIndex = 85;
             this.label55.Text = "BLOOD TYPE";
             // 
@@ -408,7 +408,7 @@
             this.label56.Font = new System.Drawing.Font("Sitka Small", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label56.Location = new System.Drawing.Point(455, 119);
             this.label56.Name = "label56";
-            this.label56.Size = new System.Drawing.Size(385, 50);
+            this.label56.Size = new System.Drawing.Size(371, 49);
             this.label56.TabIndex = 84;
             this.label56.Text = "REQUEST RECIVED ";
             // 
@@ -659,7 +659,7 @@
             this.label4.Font = new System.Drawing.Font("Sitka Small", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(1570, 201);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(251, 50);
+            this.label4.Size = new System.Drawing.Size(242, 49);
             this.label4.TabIndex = 59;
             this.label4.Text = "COST / UNIT";
             // 
@@ -669,7 +669,7 @@
             this.label3.Font = new System.Drawing.Font("Sitka Small", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(1337, 201);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(214, 50);
+            this.label3.Size = new System.Drawing.Size(208, 49);
             this.label3.TabIndex = 58;
             this.label3.Text = "QUANTITY";
             // 
@@ -679,7 +679,7 @@
             this.label2.Font = new System.Drawing.Font("Sitka Small", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(1057, 201);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(255, 50);
+            this.label2.Size = new System.Drawing.Size(246, 49);
             this.label2.TabIndex = 57;
             this.label2.Text = "BLOOD TYPE";
             // 
@@ -689,7 +689,7 @@
             this.label1.Font = new System.Drawing.Font("Sitka Small", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(1202, 119);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(361, 50);
+            this.label1.Size = new System.Drawing.Size(349, 49);
             this.label1.TabIndex = 56;
             this.label1.Text = "AVAILABLE STOCK";
             // 
@@ -833,7 +833,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Form6";
-            this.Text = "Form6";
+            this.Text = "BLOOD INVENTORY";
             this.Load += new System.EventHandler(this.Form6_Load);
             ((System.ComponentModel.ISupportInitialize)(this.availablestockBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bbDataSet6)).EndInit();

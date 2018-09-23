@@ -77,20 +77,21 @@
             // hOMEToolStripMenuItem
             // 
             this.hOMEToolStripMenuItem.Name = "hOMEToolStripMenuItem";
-            this.hOMEToolStripMenuItem.Size = new System.Drawing.Size(64, 58);
+            this.hOMEToolStripMenuItem.Size = new System.Drawing.Size(64, 24);
             this.hOMEToolStripMenuItem.Text = "HOME";
             this.hOMEToolStripMenuItem.Click += new System.EventHandler(this.hOMEToolStripMenuItem_Click);
             // 
             // aBOUTUSToolStripMenuItem
             // 
             this.aBOUTUSToolStripMenuItem.Name = "aBOUTUSToolStripMenuItem";
-            this.aBOUTUSToolStripMenuItem.Size = new System.Drawing.Size(91, 58);
+            this.aBOUTUSToolStripMenuItem.Size = new System.Drawing.Size(91, 24);
             this.aBOUTUSToolStripMenuItem.Text = "ABOUT US";
+            this.aBOUTUSToolStripMenuItem.Click += new System.EventHandler(this.aBOUTUSToolStripMenuItem_Click);
             // 
             // dONORREGISTRATIONToolStripMenuItem
             // 
             this.dONORREGISTRATIONToolStripMenuItem.Name = "dONORREGISTRATIONToolStripMenuItem";
-            this.dONORREGISTRATIONToolStripMenuItem.Size = new System.Drawing.Size(177, 58);
+            this.dONORREGISTRATIONToolStripMenuItem.Size = new System.Drawing.Size(177, 24);
             this.dONORREGISTRATIONToolStripMenuItem.Text = "DONOR REGISTRATION";
             this.dONORREGISTRATIONToolStripMenuItem.Click += new System.EventHandler(this.dONORREGISTRATIONToolStripMenuItem_Click);
             // 
@@ -104,7 +105,7 @@
             // bLOODINVENTORYToolStripMenuItem
             // 
             this.bLOODINVENTORYToolStripMenuItem.Name = "bLOODINVENTORYToolStripMenuItem";
-            this.bLOODINVENTORYToolStripMenuItem.Size = new System.Drawing.Size(151, 58);
+            this.bLOODINVENTORYToolStripMenuItem.Size = new System.Drawing.Size(151, 24);
             this.bLOODINVENTORYToolStripMenuItem.Text = "BLOOD INVENTORY";
             this.bLOODINVENTORYToolStripMenuItem.Click += new System.EventHandler(this.bLOODINVENTORYToolStripMenuItem_Click);
             // 

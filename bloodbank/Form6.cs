@@ -335,6 +335,7 @@ namespace bloodbank
                 this.status.Text="LOSS";
                 int losss = Int32.Parse(loss) - Int32.Parse(profit);
                 this.StatusAmt.Text = losss.ToString();
+                this.status.BackColor = System.Drawing.Color.Red;
                 
             }
 

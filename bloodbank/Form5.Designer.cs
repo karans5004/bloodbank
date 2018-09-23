@@ -391,7 +391,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Form5";
-            this.Text = "Form5";
+            this.Text = "RECIEVER DETAILS";
             this.Load += new System.EventHandler(this.Form5_Load);
             ((System.ComponentModel.ISupportInitialize)(this.requestersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bbDataSet3)).EndInit();

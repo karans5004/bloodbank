@@ -52,21 +52,21 @@
             this.label11 = new System.Windows.Forms.Label();
             this.dAmtRec = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.donoridDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bGroupDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quantityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.donationBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bbDataSet4 = new bloodbank.bbDataSet4();
             this.donorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bbDataSet1 = new bloodbank.bbDataSet1();
             this.donorTableAdapter = new bloodbank.bbDataSet1TableAdapters.donorTableAdapter();
             this.label12 = new System.Windows.Forms.Label();
-            this.bbDataSet4 = new bloodbank.bbDataSet4();
-            this.donationBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.donationTableAdapter = new bloodbank.bbDataSet4TableAdapters.donationTableAdapter();
-            this.donoridDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bGroupDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.quantityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.donationBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bbDataSet4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.donorBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bbDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bbDataSet4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.donationBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -311,6 +311,34 @@
             this.dataGridView1.TabIndex = 33;
             this.dataGridView1.VirtualMode = true;
             // 
+            // donoridDataGridViewTextBoxColumn
+            // 
+            this.donoridDataGridViewTextBoxColumn.DataPropertyName = "donor_id";
+            this.donoridDataGridViewTextBoxColumn.HeaderText = "donor_id";
+            this.donoridDataGridViewTextBoxColumn.Name = "donoridDataGridViewTextBoxColumn";
+            // 
+            // bGroupDataGridViewTextBoxColumn
+            // 
+            this.bGroupDataGridViewTextBoxColumn.DataPropertyName = "bGroup";
+            this.bGroupDataGridViewTextBoxColumn.HeaderText = "bGroup";
+            this.bGroupDataGridViewTextBoxColumn.Name = "bGroupDataGridViewTextBoxColumn";
+            // 
+            // quantityDataGridViewTextBoxColumn
+            // 
+            this.quantityDataGridViewTextBoxColumn.DataPropertyName = "quantity";
+            this.quantityDataGridViewTextBoxColumn.HeaderText = "quantity";
+            this.quantityDataGridViewTextBoxColumn.Name = "quantityDataGridViewTextBoxColumn";
+            // 
+            // donationBindingSource
+            // 
+            this.donationBindingSource.DataMember = "donation";
+            this.donationBindingSource.DataSource = this.bbDataSet4;
+            // 
+            // bbDataSet4
+            // 
+            this.bbDataSet4.DataSetName = "bbDataSet4";
+            this.bbDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // donorBindingSource
             // 
             this.donorBindingSource.DataMember = "donor";
@@ -335,37 +363,9 @@
             this.label12.TabIndex = 34;
             this.label12.Text = "RECENT DONATIONS";
             // 
-            // bbDataSet4
-            // 
-            this.bbDataSet4.DataSetName = "bbDataSet4";
-            this.bbDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // donationBindingSource
-            // 
-            this.donationBindingSource.DataMember = "donation";
-            this.donationBindingSource.DataSource = this.bbDataSet4;
-            // 
             // donationTableAdapter
             // 
             this.donationTableAdapter.ClearBeforeFill = true;
-            // 
-            // donoridDataGridViewTextBoxColumn
-            // 
-            this.donoridDataGridViewTextBoxColumn.DataPropertyName = "donor_id";
-            this.donoridDataGridViewTextBoxColumn.HeaderText = "donor_id";
-            this.donoridDataGridViewTextBoxColumn.Name = "donoridDataGridViewTextBoxColumn";
-            // 
-            // bGroupDataGridViewTextBoxColumn
-            // 
-            this.bGroupDataGridViewTextBoxColumn.DataPropertyName = "bGroup";
-            this.bGroupDataGridViewTextBoxColumn.HeaderText = "bGroup";
-            this.bGroupDataGridViewTextBoxColumn.Name = "bGroupDataGridViewTextBoxColumn";
-            // 
-            // quantityDataGridViewTextBoxColumn
-            // 
-            this.quantityDataGridViewTextBoxColumn.DataPropertyName = "quantity";
-            this.quantityDataGridViewTextBoxColumn.HeaderText = "quantity";
-            this.quantityDataGridViewTextBoxColumn.Name = "quantityDataGridViewTextBoxColumn";
             // 
             // Form4
             // 
@@ -398,13 +398,13 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Form4";
-            this.Text = "Form4";
+            this.Text = "DONOR DETAILS";
             this.Load += new System.EventHandler(this.Form4_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.donationBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bbDataSet4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.donorBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bbDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bbDataSet4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.donationBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

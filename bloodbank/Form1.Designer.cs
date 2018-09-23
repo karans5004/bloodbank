@@ -54,7 +54,7 @@
             this.label1.Location = new System.Drawing.Point(741, 12);
             this.label1.Name = "label1";
             this.label1.Padding = new System.Windows.Forms.Padding(2);
-            this.label1.Size = new System.Drawing.Size(606, 47);
+            this.label1.Size = new System.Drawing.Size(582, 46);
             this.label1.TabIndex = 0;
             this.label1.Text = "BLOOD BANK MANAGEMENT SYSTEM";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -206,7 +206,7 @@
             this.Controls.Add(this.label1);
             this.ForeColor = System.Drawing.Color.Crimson;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "HOME";
             this.Load += new System.EventHandler(this.Form1_Load_1);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
